@@ -1,20 +1,19 @@
-// W.A.P. to inout a number and print its maximum digit
+// W.A.P. to input a number and print its digit's product
 import java.util.*;
-public class maximum_digit {
+public class Digit_product {
     public static void main (String args[])
     {
         Scanner sc = new Scanner (System.in);
-        int n,d,max=0;
         System.out.print("Enter a number : ");
-        n = sc.nextInt();
+        int n = sc.nextInt();
+        int f=1,d;
         do
         {
             d = n % 10;
-            max = Math.max(max,d);
+            f = f * d;
             n/=10;
-        }
-        while(n>0);
-        System.out.println("Maximum digit = "+max);
+        }while(n>0);
+        System.out.println("Product = "+f);
         sc.close();
     }
 }

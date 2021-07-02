@@ -1,20 +1,22 @@
-// W.A.P. to input a number and print it's even digits
+// W.A.P. to input a number and print its even digits
 import java.util.*;
 public class Even_digit {
-    public static void main(String args[])
+    public static void main (String args[])
     {
-        int n,d;
         Scanner sc = new Scanner (System.in);
-        System.out.print("Enter a number : ");
+        System.out.println("Enter a number : ");
+        int n,d;
         n = sc.nextInt();
-        System.out.print("Even digits : ");
-        while(n>0)
+        do
         {
             d = n % 10;
-            if (d%2==0)
-            System.out.print(d+" ");
+            if(d%2==0)
+            {
+                System.out.print(d+" ");
+            }
             n/=10;
         }
+        while(n>0);
         System.out.println();
         sc.close();
     }
