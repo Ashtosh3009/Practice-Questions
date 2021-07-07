@@ -1,24 +1,20 @@
-// W.A.P. tto input a number and check whether it is Armstrong number or not.
-// Example : 1^3+5^3+3^3 = 1+125+27 = 153
-import java.util.*;
+// W.A.P. to print Armstrong Numbers from 1 to 10,000.
 public class Armstrong_Number {
     public static void main (String args[])
     {
-        int n,res=0,d,t;
-        Scanner sc =new Scanner (System.in);
-        System.out.print("Enter a number : ");
-        n = sc.nextInt();
-        t = n;
-        while(t>0)
+        int n,i,t,sum=0,d;
+        for(n=1;n<=10000;n++)
         {
-            d=t%10;
-            res = res + d*d*d;
-            t/=10;
+            sum=0;
+            t=n;
+            while(t>0)
+            {
+                d=t%10;
+                sum=sum + d*d*d;
+                t/=10;
+            }
+            if(sum==n)
+            System.out.println(n);
         }
-        if(res == n)
-        System.out.println("It is an Armstrong Number");
-        else
-        System.out.println("It is not a Armstrong Number");
-        sc.close();
     }
 }

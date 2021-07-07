@@ -1,23 +1,20 @@
-// W.A.P. to input a number and check whether it is Palindrome Number or not.
-import java.util.*;
+// W.A.P. to print Palindrome Number from 1 to 1000.
 public class Palindrome_Number {
     public static void main (String args[])
     {
-        Scanner sc = new Scanner (System.in);
-        int n,rev=0,d,t;
-        System.out.print("Enter a number : ");
-        n = sc.nextInt();
-        t = n;
-        while(t>0)
+        int n,t,sum,d;
+        for(n=1;n<=1000;n++)
         {
-            d = t % 10;
-            rev = rev * 10 + d; 
-            t /= 10;
+            t=n;
+            sum=0;
+            while(t>0)
+            {
+                d=t%10;
+                sum=sum*10+d;
+                t=t/10;
+            }
+            if(sum==n)
+            System.out.println(n);
         }
-        if(rev == n)
-        System.out.println("Palindrome Number");
-        else
-        System.out.println("Not a Palindrome Number");
-        sc.close();
     }
 }
