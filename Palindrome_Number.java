@@ -1,20 +1,32 @@
-// W.A.P. to print Palindrome Number from 1 to 1000.
-public class Palindrome_Number {
+// Write a program to create a function void isPalin() to input a number and display whether 
+// number is Palindrome Number or not. Also write main() method.
+import java.util.*;
+class Palin_Number {
+    int rev=0,n,d,t;
+    void get()
+    {
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter a number : ");
+        n = sc.nextInt();
+    }
+    void isPalin()
+    {
+        t = n;
+        while(t>0)
+        {
+            d = t % 10;
+            rev = rev * 10 + d;
+            t /= 10;
+        }
+        if(rev == n)
+        System.out.println("It's a Palindrome Number");
+        else
+        System.out.println("It's not a Palindrome Number");
+    }
     public static void main (String args[])
     {
-        int n,t,sum,d;
-        for(n=1;n<=1000;n++)
-        {
-            t=n;
-            sum=0;
-            while(t>0)
-            {
-                d=t%10;
-                sum=sum*10+d;
-                t=t/10;
-            }
-            if(sum==n)
-            System.out.println(n);
-        }
+        Palin_Number ob = new Palin_Number ();
+        ob.get();
+        ob.isPalin();
     }
 }
