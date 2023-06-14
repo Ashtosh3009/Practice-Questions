@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Page Design - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>I think this platform is great overall, the only real issue I've been dealing with is that after watching a reel or sometimes just a regular video, the feed resets when exited and I cycle through a lot of the same posts.
+                    </p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+                <div class="user-text active-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>So, far, it has been excellent. However, sometimes when you click to double your points and it goes to an ad? It seems to get stuck, like it won't let you return to the game after the ad's timer has run out.</p>
+                    <span>Ronald Reagen, MD Harman</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>For how big this platform is, I'm super impressed with how quick it functions regardless if I'm on data or Wifi. Yes, it builds up a sizable cache in a short amount of time, but that's an easy fix in the settings.</p>
+                    <span>Vladimir Putin, CTO Xiaomi</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>Great Platform! But one annoying bug involving the friend tab: sometimes when I see a notification for a new friend, no new friend will show up in my feed, or the notification disappears after a few seconds.</p>
+                    <span>Great Thunderg, HR Infoedz</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>The only Platform on my phone that launches multiple instances of itself. Can quickly become resource-consuming when using the app throughout the day. Most recommended platform in the world.</p>
+                    <span>Amelia Earhart, TL Amazon</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="images/user1.png" class="user-pic" onclick="showReview()">
+                <img src="images/user2.png" class="user-pic active-pic" onclick="showReview()">
+                <img src="images/user3.png" class="user-pic" onclick="showReview()">
+                <img src="images/user4.png" class="user-pic" onclick="showReview()">
+                <img src="images/user5.png" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>I think this platform is great overall, the only real issue I've been dealing with is that after watching a reel or sometimes just a regular video, the feed resets when exited and I cycle through a lot of the same posts.
+                    </p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+                <div class="user-text active-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>So, far, it has been excellent. However, sometimes when you click to double your points and it goes to an ad? It seems to get stuck, like it won't let you return to the game after the ad's timer has run out.</p>
+                    <span>Ronald Reagen, MD Harman</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>For how big this platform is, I'm super impressed with how quick it functions regardless if I'm on data or Wifi. Yes, it builds up a sizable cache in a short amount of time, but that's an easy fix in the settings.</p>
+                    <span>Vladimir Putin, CTO Xiaomi</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>Great Platform! But one annoying bug involving the friend tab: sometimes when I see a notification for a new friend, no new friend will show up in my feed, or the notification disappears after a few seconds.</p>
+                    <span>Great Thunderg, HR Infoedz</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-qoute-left">&ldquo; </i>
+                    <p>The only Platform on my phone that launches multiple instances of itself. Can quickly become resource-consuming when using the app throughout the day. Most recommended platform in the world.</p>
+                    <span>Amelia Earhart, TL Amazon</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="images/user1.png" class="user-pic" onclick="showReview()">
+                <img src="images/user2.png" class="user-pic active-pic" onclick="showReview()">
+                <img src="images/user3.png" class="user-pic" onclick="showReview()">
+                <img src="images/user4.png" class="user-pic" onclick="showReview()">
+                <img src="images/user5.png" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+    <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+        function showReview(){
+            for(userPic of userPics){
+                userPic.classList.remove("active-pic");
+            }
+            for(userText of userTexts){
+                userText.classList.remove("active-text");
+            }
+            let i = Array.from(userPics).indexOf(event.target);
+            userPics[i].classList.add("active-pic");
+            userTexts[i].classList.add("active-text");
+        }
+    </script>
+</body>
+</html>
